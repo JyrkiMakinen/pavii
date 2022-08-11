@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <title>Actividad 1</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="styles.css" />
+    <script type="module" src="script.js"></script>
+  </head>
+  <body>
+    <nav>
+      <a href="/" aria-current="page">Actividad 1</a>
+      <a href="/html2.html">Actividad 2</a>
+      <a href="/html3.html">Actividad 3</a>
+      <a href="/persona.html">Persona</a>
+    </nav>
+    <main>
+    <h1>Ejercicio análisis de un documento html con las herramientas del navegador Chrome.</h1>
+    <h3>Analice la página web del sitio www.frc.utn.edu.ar con Chrome devtools</h3>
+
+    <h4>Responda las siguientes preguntas:</h4>
+
+    <p><b>¿Cuántos Kilobytes se transfieren al navegador para visualizar la página de manera completa? ¿Cuánto tiempo demora en cargar la página? Si se utiliza el caché del navegador, ¿demora lo mismo?</b></p>
+
+    <p>Se transfieren 131kB. Demora 11,14s en cargar sin caché, y 3,65s con caché.</p>
+
+    <p><b>¿La página posee errores o warnings?</b></p>
+    
+    <p>Posee dos warnings y cuatro errores. Puedo deducir de los mensajes que se tratan de errores producto de mi configuración, ya que los cuatro warnings fueron de reproductores de publicidad bloqueados por el cliente, probablemente porque tengo instalado AdBlock en mi navegador.</p>
+    
+    <p><b>¿Cuál es el archivo que demora más tiempo en descargarse de la página?</b></p>
+
+    <p>El que más demora es el archivo html llamado www.frc.utn.edu.ar, que es el que contiene la página a mostrar. Demora 1,77s con caché.</p>
+
+    <p><b>¿Todos los archivos provienen del mismo servidor?</b></p>
+
+    <p>No. Algunos provienen del servidor de la facultad, otros de YouTube, otros de Google, y otros sitios de publicidad.</p>
+
+    <p><b>¿Cuántas imágenes posee? ¿Qué tiempo que demora en descargarlas? ¿Cuál es la imagen de mayor tamaño en kilobytes que se descarga del sitio?</b></p>
+    
+    <p>Hay 66 archivos de imagen, incluyendo formatos gif, jpeg, png y webp. Demoraron 424ms en descargarse con caché. La imagen de mayor tamaño fue h.gif de 1,4kB, aunque no se descargó por completo en la carga de la página porque había quedado guardada en la caché..</p>
+    
+    <p><b>¿Cuántos archivos de hojas de estilo utiliza?</b></p>
+
+    <p>Hay 4 archivos de hojas de estilo, dos de los cuales son de YouTube.</p>
+
+    <p><b>¿En qué versión de html indica el documento que está realizada la página?</b></p>
+
+    <p>Está realizada en XHTML.</p>
+
+    <p><b>¿Los archivos javascript y/o css están minificados?</b></p>
+
+    <p>Ni los archivos javascript ni los css están minificados por completo.</p>
+
+    <p><b>¿Qué tiempo demoraría la página en descargar en un equipo con señal de datos de una red Regular 3G?</b></p>
+    
+    <p>Tardaría 35,29s usando una red Slow 3G (antes llamada Regular 3G).</p>
+    
+    <p><b>La página es compatible con el estándar html indicado en la cabecera. Analice la misma en https://validator.w3.org/</b></p>
+
+    <p>No fue posible validar la página ya que existen 23 errores en el código, principalmente relacionados con inconsistencias de apertura y cierre de etiquetas.</p>
+
+    <p><b>Analice las recomendaciones para mejorar la velocidad de carga de la página en https://developers.google.com/speed/pagespeed/</b></p>
+
+    <p>El rendimiento es de 66/100 para la versión de escritorio, y de 44/100 para la versión mobile. Las principales recomendaciones son reducir el tiempo de respuesta inicial del servidor para la carga del documento principal, y reducir código javascript fuera de uso. Esta última recomendación impacta aún más en la versión mobile, alcanzando los 9,42s de tiempo de carga innecesario.</p>
+
+    <p><b>Realice el mismo análisis con el sitio www.cba.gob.ar</b></p>
+
+    <p>El rendimiento es de 28/100 para la versión de escritorio, y de 17/100 para la versión mobile. Las principales recomendaciones son eliminar recursos de bloque renderizados y habilitar la compresión de texto. En la versión mobile, solucionar estos dos problemas eliminaría hasta 25,03s de tiempo de carga.</p>
+
+    </main>
+  </body>
+</html>
